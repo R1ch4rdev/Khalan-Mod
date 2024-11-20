@@ -48,7 +48,7 @@ console.log(Object.defineProperties(new Error, { toString: {value() {(new Error)
 
 /* Misc Styles */
 // Most of these will eventually stop working, as my proxy will become inactive.
-document.head.appendChild(Object.assign(document.createElement("style"),{innerHTML:"@font-face{font-family:'MuseoSans';src:url('https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673e82ba&is=673d313a&hm=b3857c7fd6b878c85fe568054e4949a074f195ed64e9aaa2c7f381896ace775f&')format('truetype')}" }));
+document.head.appendChild(Object.assign(document.createElement("style"),{innerHTML:"@font-face{font-family:'MuseoSans';src:url('https://proxy.khanware.space/r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ynddewua.ttf')format('truetype')}" }));
 document.head.appendChild(Object.assign(document.createElement('style'),{innerHTML:"https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673e82ba&is=673d313a&hm=b3857c7fd6b878c85fe568054e4949a074f195ed64e9aaa2c7f381896ace775f&"}));
 document.querySelector("link[rel~='icon']").href = 'https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673e82ba&is=673d313a&hm=b3857c7fd6b878c85fe568054e4949a074f195ed64e9aaa2c7f381896ace775f&';
 
