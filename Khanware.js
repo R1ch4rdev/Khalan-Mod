@@ -23,6 +23,28 @@ const watermark = document.createElement('watermark');
 const statsPanel = document.createElement('statsPanel');
 const splashScreen = document.createElement('splashScreen');
 
+/* Marca */
+function addWatermark() {
+    const watermark = document.createElement('img');  // Cria um elemento de imagem
+    watermark.style.position = 'fixed';               // Posicionamento fixo
+    watermark.style.top = '10px';                     // Distância do topo
+    watermark.style.left = '10px';                    // Distância da esquerda
+    watermark.style.zIndex = '9999';                  // Garante que a imagem esteja acima de outros elementos
+    watermark.style.pointerEvents = 'none';           // Desabilita interação com a marca d'água (não bloqueia cliques)
+    watermark.style.opacity = '0.5';                  // Ajuste a opacidade para dar o efeito de marca d'água
+    watermark.style.maxWidth = '100px';               // Define o tamanho máximo da imagem
+    watermark.style.maxHeight = '100px';              // Define o tamanho máximo da imagem
+
+    // URL do ícone que você deseja usar como marca d'água
+    watermark.src = 'https://media.discordapp.net/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673f2b7a&is=673dd9fa&hm=984021f6a71acabcf9aa91a6653f93d52bb9f74c83f2c384ec28fda762f81f43&=&format=webp&quality=lossless&width=676&height=676'; // Substitua por sua URL de ícone
+
+    // Adiciona a marca d'água na página
+    document.body.appendChild(watermark);
+}
+
+// Chama a função para adicionar a marca d'água
+addWatermark();
+
 /* Globals */
 window.features = {
     questionSpoof: true,
