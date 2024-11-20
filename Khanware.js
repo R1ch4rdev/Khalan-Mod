@@ -9,7 +9,7 @@ let device = {
 // Discaimer: user parameters were managed by the main injector.
 // This will not change automatically.
 let user = {
-    username: "Username",
+    username: "R1CH4RD",
     nickname: "Nickname",
     UID: 0
 }
