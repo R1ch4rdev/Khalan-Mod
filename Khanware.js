@@ -15,28 +15,6 @@ let user = {
 }
 
 let loadedPlugins = [];
-/* Marca da agua */
-function addWatermark() {
-    const watermark = document.createElement('img');  // Cria um elemento de imagem
-    watermark.style.position = 'fixed';               // Posicionamento fixo
-    watermark.style.top = '10px';                     // Distância do topo
-    watermark.style.left = '10px';                    // Distância da esquerda
-    watermark.style.zIndex = '9999';                  // Garante que a imagem esteja acima de outros elementos
-    watermark.style.pointerEvents = 'none';           // Desabilita interação com a marca d'água (não bloqueia cliques)
-    watermark.style.opacity = '0.5';                  // Ajuste a opacidade para dar o efeito de marca d'água
-    watermark.style.maxWidth = '100px';               // Define o tamanho máximo da imagem
-    watermark.style.maxHeight = '100px';              // Define o tamanho máximo da imagem
-
-    // URL do ícone que você deseja usar como marca d'água
-    watermark.src = 'https://exemplo.com/seu-icone.png'; // Substitua por sua URL de ícone
-
-    // Adiciona a marca d'água na página
-    document.body.appendChild(watermark);
-}
-
-// Chama a função para adicionar a marca d'água
-addWatermark();
-}
 
 /* Elements */
 const unloader = document.createElement('unloader');
@@ -71,8 +49,8 @@ console.log(Object.defineProperties(new Error, { toString: {value() {(new Error)
 /* Misc Styles */
 // Most of these will eventually stop working, as my proxy will become inactive.
 document.head.appendChild(Object.assign(document.createElement("style"),{innerHTML:"@font-face{font-family:'MuseoSans';src:url('https://proxy.khanware.space/r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ynddewua.ttf')format('truetype')}" }));
-document.head.appendChild(Object.assign(document.createElement('style'),{innerHTML:"https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673e82ba&is=673d313a&hm=b3857c7fd6b878c85fe568054e4949a074f195ed64e9aaa2c7f381896ace775f&"}));
-document.querySelector("link[rel~='icon']").href = 'https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673e82ba&is=673d313a&hm=b3857c7fd6b878c85fe568054e4949a074f195ed64e9aaa2c7f381896ace775f&';
+document.head.appendChild(Object.assign(document.createElement('style'),{innerHTML:"::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #f1f1f1; } ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background: #555; }"}));
+document.querySelector("link[rel~='icon']").href = 'https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ukh0rq22.png';
 
 /* Emmiter */
 class EventEmitter{constructor(){this.events={}}on(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]||(this.events[t]=[]),this.events[t].push(e)})}off(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]&&(this.events[t]=this.events[t].filter(t=>t!==e))})}emit(t,...e){this.events[t]&&this.events[t].forEach(t=>{t(...e)})}once(t,e){"string"==typeof t&&(t=[t]);let s=(...i)=>{e(...i),this.off(t,s)};this.on(t,s)}};
@@ -88,7 +66,7 @@ const findAndClickByClass = className => { const element = document.querySelecto
 
 function sendToast(text, duration=5000, gravity='bottom') { Toastify({ text: text, duration: duration, gravity: gravity, position: "center", stopOnFocus: true, style: { background: "#000000" } }).showToast(); };
 
-async function showSplashScreen() { splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;"; splashScreen.innerHTML = '<span style="color:white;">R1CH4RD</span><span style="color:#72ff72;">.DEV</span>'; document.body.appendChild(splashScreen); setTimeout(() => splashScreen.style.opacity = '1', 10);};
+async function showSplashScreen() { splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;"; splashScreen.innerHTML = '<span style="color:white;">KHANWARE</span><span style="color:#72ff72;">.SPACE</span>'; document.body.appendChild(splashScreen); setTimeout(() => splashScreen.style.opacity = '1', 10);};
 async function hideSplashScreen() { splashScreen.style.opacity = '0'; setTimeout(() => splashScreen.remove(), 1000); };
 
 async function loadScript(url, label) { return fetch(url).then(response => response.text()).then(script => { loadedPlugins.push(label); eval(script); }); }
@@ -165,7 +143,8 @@ function setupMenu() {
             cursor: 'default', userSelect: 'none', padding: '0 10px',  borderRadius: '10px', zIndex: '1001', transition: 'transform 0.3s ease'
         });
         if (device.mobile) watermark.style.left = '55%'
-        watermark.innerHTML = `<span style="text-shadow: -1px 0.5px 0 #72ff72, -2px 0px 0 #2f672e;">KW</span> <span style="color:gray; padding-left:2px; font-family: Arial, sans-serif; font-size:10px">${ver}</span>`;
+        watermark.innerHTML = `<span style="text-shadow: -1px 0.5px 0 #72ff72, -2px 0px 0 #2f672e;">RI</span> <span style="color:gray; padding-left:2px; font-family: Arial, sans-serif; font-size:10px">${ver}</span>`;
+        document.body.appendChild(watermark);
         let isDragging = false, offsetX, offsetY;
         watermark.addEventListener('mousedown', e => { if (!dropdownMenu.contains(e.target)) { isDragging = true; offsetX = e.clientX - watermark.offsetLeft; offsetY = e.clientY - watermark.offsetTop; watermark.style.transform = 'scale(0.9)'; unloader.style.transform = 'scale(1)'; } });
         watermark.addEventListener('mouseup', () => { isDragging = false; watermark.style.transform = 'scale(1)'; unloader.style.transform = 'scale(0)'; if (checkCollision(watermark.getBoundingClientRect(), unloader.getBoundingClientRect())) unload(); });
