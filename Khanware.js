@@ -15,6 +15,28 @@ let user = {
 }
 
 let loadedPlugins = [];
+/* Marca da agua */
+function addWatermark() {
+    const watermark = document.createElement('img');  // Cria um elemento de imagem
+    watermark.style.position = 'fixed';               // Posicionamento fixo
+    watermark.style.top = '10px';                     // Distância do topo
+    watermark.style.left = '10px';                    // Distância da esquerda
+    watermark.style.zIndex = '9999';                  // Garante que a imagem esteja acima de outros elementos
+    watermark.style.pointerEvents = 'none';           // Desabilita interação com a marca d'água (não bloqueia cliques)
+    watermark.style.opacity = '0.5';                  // Ajuste a opacidade para dar o efeito de marca d'água
+    watermark.style.maxWidth = '100px';               // Define o tamanho máximo da imagem
+    watermark.style.maxHeight = '100px';              // Define o tamanho máximo da imagem
+
+    // URL do ícone que você deseja usar como marca d'água
+    watermark.src = 'https://exemplo.com/seu-icone.png'; // Substitua por sua URL de ícone
+
+    // Adiciona a marca d'água na página
+    document.body.appendChild(watermark);
+}
+
+// Chama a função para adicionar a marca d'água
+addWatermark();
+}
 
 /* Elements */
 const unloader = document.createElement('unloader');
