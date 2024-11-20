@@ -10,7 +10,7 @@ let device = {
 // This will not change automatically.
 let user = {
     username: "R1CH4RD",
-    nickname: "Nickname",
+    nickname: "R1CHARD",
     UID: 0
 }
 
@@ -72,7 +72,7 @@ console.log(Object.defineProperties(new Error, { toString: {value() {(new Error)
 // Most of these will eventually stop working, as my proxy will become inactive.
 document.head.appendChild(Object.assign(document.createElement("style"),{innerHTML:"@font-face{font-family:'MuseoSans';src:url('https://proxy.khanware.space/r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ynddewua.ttf')format('truetype')}" }));
 document.head.appendChild(Object.assign(document.createElement('style'),{innerHTML:"::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #f1f1f1; } ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background: #555; }"}));
-document.querySelector("link[rel~='icon']").href = 'https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ukh0rq22.png';
+document.querySelector("link[rel~='icon']").href = 'https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673f2b7a&is=673dd9fa&hm=984021f6a71acabcf9aa91a6653f93d52bb9f74c83f2c384ec28fda762f81f43&';
 
 /* Emmiter */
 class EventEmitter{constructor(){this.events={}}on(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]||(this.events[t]=[]),this.events[t].push(e)})}off(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]&&(this.events[t]=this.events[t].filter(t=>t!==e))})}emit(t,...e){this.events[t]&&this.events[t].forEach(t=>{t(...e)})}once(t,e){"string"==typeof t&&(t=[t]);let s=(...i)=>{e(...i),this.off(t,s)};this.on(t,s)}};
