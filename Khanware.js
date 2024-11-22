@@ -234,7 +234,7 @@ function setupMenu() {
         const getPing = async () => { try { const t = performance.now(); await fetch('https://pt.khanacademy.org/', { method: 'HEAD' }); return Math.round(performance.now() - t); } catch { return 'Error'; } };
         let lastFrameTime = performance.now(), frameCount = 0, fps = 0;
         (function calcFPS() { if (++frameCount && performance.now() - lastFrameTime >= 1000) { fps = Math.round(frameCount * 1000 / (performance.now() - lastFrameTime)); frameCount = 0; lastFrameTime = performance.now(); } requestAnimationFrame(calcFPS); })();
-        const getTime = () => new Date ().toLocaleTimeString();
+       const getTime = () => new Date().toLocaleTimeString();
         const update = async () => statsPanel.innerHTML = `
             <span style="text-shadow: -1px 0.5px 0 #p, -2px 0px 0 #2f672e;">KW</span>
             <span style="margin: 0 8px;">|</span><span>${fps}fps</span>
