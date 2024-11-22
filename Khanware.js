@@ -36,7 +36,7 @@ function addWatermark() {
     watermark.style.maxHeight = '100px';              // Define o tamanho máximo da imagem
 
     // URL do ícone que você deseja usar como marca d'água
-    watermark.src = 'https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673f2b7a&is=673dd9fa&hm=984021f6a71acabcf9aa91a6653f93d52bb9f74c83f2c384ec28fda762f81f43&'; // Substitua por sua URL de ícone
+    watermark.src = 'https://media.discordapp.net/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=6741ce7a&is=67407cfa&hm=ce6c60a37c85eee961698515e702f02dac3c25cdc00b190a83750a6f1ea4bfc6&=&format=webp&quality=lossless&width=676&height=676'; // Substitua por sua URL de ícone
 
     // Adiciona a marca d'água na página
     document.body.appendChild(watermark);
@@ -72,7 +72,7 @@ console.log(Object.defineProperties(new Error, { toString: {value() {(new Error)
 // Most of these will eventually stop working, as my proxy will become inactive.
 document.head.appendChild(Object.assign(document.createElement("style"),{innerHTML:"@font-face{font-family:'MuseoSans';src:url('https://proxy.khanware.space/r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ynddewua.ttf')format('truetype')}" }));
 document.head.appendChild(Object.assign(document.createElement('style'),{innerHTML:"::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #f1f1f1; } ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background: #555; }"}));
-document.querySelector("link[rel~='icon']").href = 'https://cdn.discordapp.com/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=673f2b7a&is=673dd9fa&hm=984021f6a71acabcf9aa91a6653f93d52bb9f74c83f2c384ec28fda762f81f43&';
+document.querySelector("link[rel~='icon']").href = 'https://media.discordapp.net/attachments/1306842077430153218/1308594103923114115/mascot.png?ex=6741ce7a&is=67407cfa&hm=ce6c60a37c85eee961698515e702f02dac3c25cdc00b190a83750a6f1ea4bfc6&=&format=webp&quality=lossless&width=676&height=676';
 
 /* Emmiter */
 class EventEmitter{constructor(){this.events={}}on(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]||(this.events[t]=[]),this.events[t].push(e)})}off(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]&&(this.events[t]=this.events[t].filter(t=>t!==e))})}emit(t,...e){this.events[t]&&this.events[t].forEach(t=>{t(...e)})}once(t,e){"string"==typeof t&&(t=[t]);let s=(...i)=>{e(...i),this.off(t,s)};this.on(t,s)}};
